@@ -1,0 +1,4 @@
+ATTEMPT=1
+ATTEMPT=2
+ATTEMPT=3
+RESULT: Retry succeeded

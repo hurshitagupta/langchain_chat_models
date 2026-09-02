@@ -1,0 +1,3 @@
+PRIMARY_MODEL_FAILED
+FALLBACK_MODEL_INVOKED
+Result: Fallback response
