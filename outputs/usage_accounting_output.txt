@@ -1,0 +1,6 @@
+Response: Retrieval‑augmented generation (RAG) is a technique where a language model first fetches relevant external documents or data from a knowledge base and then uses that retrieved information to condition its generated response.
+Input tokens: 87
+Output tokens: 76
+Total tokens: 163
+Calculated cost USD: 1.5530000000000002e-05
+Provider reported cost USD: 1.553e-05

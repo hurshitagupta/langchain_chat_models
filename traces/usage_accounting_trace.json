@@ -1,0 +1,9 @@
+{
+    "task": "usage_accounting",
+    "model": "openai/gpt-oss-120b",
+    "input_tokens": 87,
+    "output_tokens": 76,
+    "total_tokens": 163,
+    "calculated_cost_usd": 1.5530000000000002e-05,
+    "provider_cost_usd": 1.553e-05
+}

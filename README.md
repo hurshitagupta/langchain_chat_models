@@ -286,4 +286,96 @@ The saved pytest output is available in:
 ```text id="o4qq5p"
 outputs/resilience_tests.txt
 ```
+---
+
+## Task 4 — Usage Accounting
+
+The goal of this task was to read token usage from the model response metadata and calculate the USD cost of a chat-model request.
+
+The OpenRouter response exposes token usage through `usage_metadata`, including:
+
+```text
+input_tokens
+output_tokens
+total_tokens
+```
+
+The task extracts these values directly from the actual model response rather than estimating them locally.
+
+### Cost Calculation
+
+The model used for this task is priced separately for input and output tokens.
+
+The calculated cost is based on:
+
+```text
+input cost  = input tokens / 1,000,000 × input price
+output cost = output tokens / 1,000,000 × output price
+
+total cost = input cost + output cost
+```
+
+The implementation also reads OpenRouter's provider-reported cost from the response metadata and prints it alongside the manually calculated value for comparison.
+
+### Run
+
+```bash
+uv run python -m usage_accounting.usage_accounting
+```
+
+The saved execution output is available in:
+
+```text
+outputs/usage_accounting_output.txt
+```
+
+The output includes:
+
+* model response
+* input token count
+* output token count
+* total token count
+* manually calculated USD cost
+* provider-reported USD cost
+
+### Tests
+
+The automated tests verify:
+
+* correct cost calculation from known token counts and prices
+* rejection of invalid negative token counts
+
+Run:
+
+```bash
+uv run python -m pytest tests/test_usage_accounting.py -v
+```
+
+The saved pytest output is available in:
+
+```text
+outputs/usage_accounting_tests.txt
+```
+
+### Guardrails
+
+The task reuses the shared assessment protections, including:
+
+* model-call step limit
+* per-call timeout
+* capped retry behaviour
+* input token-budget checking
+* model output validation
+* environment-only API credentials
+
+### Trace
+
+The task generates a structured trace at:
+
+```text
+traces/usage_accounting_trace.json
+```
+
+The trace records token usage and cost measurements without storing API credentials.
+
 
