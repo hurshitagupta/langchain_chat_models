@@ -1,0 +1,2 @@
+Sequence A:  PURPLE
+Sequence B:  ORANGE

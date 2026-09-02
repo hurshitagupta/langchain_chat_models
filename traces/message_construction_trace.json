@@ -1,0 +1,8 @@
+{
+    "task": "message_construction",
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0,
+    "sequence_a_output": "PURPLE",
+    "sequence_b_output": "ORANGE",
+    "outputs_equal": false
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Hurshita Gupta\OneDrive\Desktop\langchain_chat_model\guardrail_evidence\token_budget_evidence.py", line 3, in <module>
+    check_token_budget(
+  File "C:\Users\Hurshita Gupta\OneDrive\Desktop\langchain_chat_model\common\guards.py", line 38, in check_token_budget
+    raise TokenBudgetError(
+common.guards.TokenBudgetError: TOKEN_BUDGET_EXCEEDED: 150 tokens exceeds the maximum budget of 100.
