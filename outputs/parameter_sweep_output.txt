@@ -1,0 +1,39 @@
+--- Temperature 0.0 ---
+Temperature=0.0 | Run=1 | Output=Explore smarter, travel further.
+Temperature=0.0 | Run=2 | Output=Explore Smarter, Travel Faster
+Temperature=0.0 | Run=3 | Output=Your Journey, AI Guided
+Temperature=0.0 | Run=4 | Output=Explore smarter, travel further
+Temperature=0.0 | Run=5 | Output=Explore Smarter, Travel Faster
+Temperature=0.0 | Run=6 | Output=Explore Smarter, Travel Faster
+Temperature=0.0 | Run=7 | Output=Your Journey, AI Guided
+Temperature=0.0 | Run=8 | Output=Explore smarter, travel further.
+Temperature=0.0 | Run=9 | Output=Explore Smarter, Travel Faster
+Temperature=0.0 | Run=10 | Output=Your Journey, AI Guided
+Summary | Temperature=0.0 | Runs=10 | Unique Outputs=3 | Variance Rate=0.30
+
+--- Temperature 0.7 ---
+Temperature=0.7 | Run=1 | Output=Explore More, Worry Less
+Temperature=0.7 | Run=2 | Output=Navigate Tomorrow's Adventures Today
+Temperature=0.7 | Run=3 | Output=Explore More, Worry Less
+Temperature=0.7 | Run=4 | Output=Explore More, Worry Less
+Temperature=0.7 | Run=5 | Output=Your adventure, AI guided
+Temperature=0.7 | Run=6 | Output=Smart Paths, Seamless Adventures
+Temperature=0.7 | Run=7 | Output=Smart Paths, Seamless Adventures
+Temperature=0.7 | Run=8 | Output=Travel Smarter, Explore More
+Temperature=0.7 | Run=9 | Output=Travel Smarter, Wander Far
+Temperature=0.7 | Run=10 | Output=Travel Smarter, Wander Far
+Summary | Temperature=0.7 | Runs=10 | Unique Outputs=6 | Variance Rate=0.60
+
+--- Temperature 1.0 ---
+Temperature=1.0 | Run=1 | Output=Explore smarter, travel effortlessly
+Temperature=1.0 | Run=2 | Output=Your Journey, Powered by AI
+Temperature=1.0 | Run=3 | Output=Navigate Worlds, Effortlessly
+Temperature=1.0 | Run=4 | Output=Explore More, Worry Less
+Temperature=1.0 | Run=5 | Output=Travel Smarter with AI
+Temperature=1.0 | Run=6 | Output=Explore smarter, travel farther
+Temperature=1.0 | Run=7 | Output=Explore smarter, travel farther
+Temperature=1.0 | Run=8 | Output=Your Journey, AI‑Powered
+Temperature=1.0 | Run=9 | Output=AI Guides Your Wanderlust
+Temperature=1.0 | Run=10 | Output=Smart Paths, Endless Adventures
+Summary | Temperature=1.0 | Runs=10 | Unique Outputs=9 | Variance Rate=0.90
+
