@@ -1,0 +1,10 @@
+--- OpenRouter ---
+Retrieval‑augmented generation (RAG) is a technique where a language model first fetches relevant external documents or data and then uses that retrieved information to condition its generated response.
+
+--- Gemini ---
+Retrieval-Augmented Generation (RAG) is a technique that improves AI text generation by first searching an external database for relevant facts and using them to produce more accurate, up-to-date answers.
+
+--- Comparison ---
+Exact match: False
+Similarity: 0.207
+Length difference: 2

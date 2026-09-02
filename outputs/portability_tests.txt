@@ -1,0 +1,12 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Hurshita Gupta\OneDrive\Desktop\langchain_chat_model\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Hurshita Gupta\OneDrive\Desktop\langchain_chat_model
+configfile: pyproject.toml
+plugins: anyio-4.14.2, langsmith-0.12.1
+collecting ... collected 2 items
+
+tests/test_portability.py::test_success_compare_outputs PASSED           [ 50%]
+tests/test_portability.py::test_failure_unsupported_provider PASSED      [100%]
+
+============================== 2 passed in 1.97s ==============================

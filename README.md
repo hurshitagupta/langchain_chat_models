@@ -377,5 +377,109 @@ traces/usage_accounting_trace.json
 ```
 
 The trace records token usage and cost measurements without storing API credentials.
+---
+
+## Task 5 — Portability
+
+The goal of this task was to run the same prompt against two different model providers behind one interface and compare their responses.
+
+The implementation uses:
+
+```text id="7uwgq8"
+Provider 1 → OpenRouter
+Provider 2 → Google Gemini
+```
+
+Provider-specific model creation is handled by `create_model()`, while both models are invoked through the same `invoke_provider()` interface.
+
+The exact same system and human messages are therefore sent to both providers without changing the calling code.
+
+### Response Normalization
+
+During implementation, an important provider difference became visible.
+
+OpenRouter returned `response.content` as a string, while Gemini could return structured content as a list.
+
+The portability layer normalizes both response formats into a validated text string before returning the result to the caller.
+
+This keeps provider-specific response formatting outside the rest of the application.
+
+### Output Comparison
+
+The two responses are compared using:
+
+* exact text match
+* textual similarity score
+* response length difference
+
+One observed run produced:
+
+```text id="jj1i5m"
+Exact match: False
+Similarity: 0.207
+Length difference: 2
+```
+
+The similarity value represents textual sequence similarity rather than semantic similarity.
+
+### Run
+
+```bash id="rrvn6s"
+uv run python -m portability.portability
+```
+
+Saved output:
+
+```text id="0smrkt"
+outputs/portability_output.txt
+```
+
+### Tests
+
+The automated tests verify:
+
+* successful comparison of two provider outputs
+* rejection of an unsupported provider
+
+The tests operate on deterministic local logic rather than depending on live provider responses.
+
+Run:
+
+```bash id="21j2au"
+uv run python -m pytest tests/test_portability.py -v
+```
+
+Saved pytest output:
+
+```text id="83s1aq"
+outputs/portability_tests.txt
+```
+
+### Trace
+
+The execution generates:
+
+```text id="qfkwug"
+traces/portability_trace.json
+```
+
+The trace records the providers, model names, normalized responses, and comparison measurements without storing API credentials.
+
+### Guardrails
+
+The portability task reuses the shared assessment protections:
+
+* hard limit of two provider calls
+* per-call timeout on both OpenRouter and Gemini
+* capped retry using LangChain's `with_retry`
+* input token-budget validation before provider invocation
+* response normalization and output validation
+* API credentials loaded only from environment variables
+
+The reusable guardrail failure evidence is stored in the existing `outputs/` guardrail evidence files and is not duplicated per task.
+
+---
+
+
 
 

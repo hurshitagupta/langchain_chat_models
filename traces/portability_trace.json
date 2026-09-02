@@ -1,0 +1,14 @@
+{
+    "task": "portability",
+    "providers": [
+        "openrouter",
+        "gemini"
+    ],
+    "openrouter_model": "openai/gpt-oss-120b",
+    "gemini_model": "gemini-3.5-flash-lite",
+    "openrouter_output": "Retrieval\u2011augmented generation (RAG) is a technique where a language model first fetches relevant external documents or data and then incorporates that retrieved information into its generated response.",
+    "gemini_output": "Retrieval-Augmented Generation (RAG) is a technique that improves AI text generation by first fetching relevant external facts from a database to use as context for the response.",
+    "exact_match": false,
+    "textual_similarity": 0.584,
+    "length_difference": 24
+}
